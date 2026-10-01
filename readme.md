@@ -1,122 +1,125 @@
 # Crop Yield Prediction Using Machine Learning
 
-## Overview
+## About the Project
 
-This project uses **Multiple Linear Regression** to predict crop yield based on:
+I built this project to explore how machine learning can be used to predict crop yield from environmental and agricultural factors.
 
-- Temperature
-- Rainfall
-- Fertilizer Usage
-- Pesticide Usage
+I used **Multiple Linear Regression** to predict yield based on:
 
-The project includes data exploration, visualization, model training, evaluation, and prediction.
+* Temperature
+* Rainfall
+* Fertilizer usage
+* Pesticide usage
+
+The project covers data exploration, visualization, model training, evaluation, and making predictions with the trained model.
 
 ## Dataset
 
 The dataset contains **1,000 records and 9 columns**.
 
-The model uses:
+The model uses four features:
 
-Temperature
-Rainfall
-Fertilizer_Usage
-Pesticide_Usage
+* `Temperature`
+* `Rainfall`
+* `Fertilizer_Usage`
+* `Pesticide_Usage`
 
-Target:
+**Target:** `Yield`
 
-Yield
+## Tools
 
-## Tools Used
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Pickle
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-learn
+* Pickle
 
 ## Model
 
-The project uses **Multiple Linear Regression**.
+I used **Multiple Linear Regression** and split the data into:
 
-The data was split into:
+* **80% training**
+* **20% testing**
 
-- 80% training data
-- 20% testing data
+### Results
 
-## Results
+| Metric                         | Result |
+| ------------------------------ | -----: |
+| Mean Squared Error (MSE)       | 0.3346 |
+| Root Mean Squared Error (RMSE) | 0.5785 |
+| R² Score                       | 0.9964 |
 
-Metric Result
-Mean Squared Error (MSE): 0.3346
-Root Mean Squared Error (RMSE): 0.5785
-R-squared Score (R²): 0.9964
+### Example Prediction
 
-## Prediction Example
+For:
 
-For the following conditions:
+* Temperature: **25**
+* Rainfall: **150**
+* Fertilizer Usage: **200**
+* Pesticide Usage: **30**
 
-Temperature: 25
-Rainfall: 150
-Fertilizer Usage: 200
-Pesticide Usage: 30
-
-The model predicted:
-
-8.17 tonnes per hectare
+The model predicted a yield of approximately **8.17 tonnes per hectare**.
 
 ## Project Structure
 
-Crop Yield Prediction Model/
+```text
+Crop-Yield-Prediction-Model/
 │
 ├── src/
-│ └── crop_yield_prediction.py
+│   └── crop_yield_prediction.py
 │
 ├── models/
-│ └── crop_yield_model.pkl
+│   └── crop_yield_model.pkl
 │
 ├── outputs/
-│ ├── yield_distribution.png
-│ ├── temperature-vs-yield.png
-│ ├── rainfall-vs-yield.png
-│ ├── fertilizer-usage-vs-yield.png
-│ ├── pesticide-usage-vs-yield.png
-│ ├── correlation_heatmap.png
-│ ├── actual_vs_predicted.png
-│ └── residuals.png
+│   ├── yield_distribution.png
+│   ├── temperature-vs-yield.png
+│   ├── rainfall-vs-yield.png
+│   ├── fertilizer-usage-vs-yield.png
+│   ├── pesticide-usage-vs-yield.png
+│   ├── correlation_heatmap.png
+│   ├── actual_vs_predicted.png
+│   └── residuals.png
 │
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+```
 
-## How to Run
+## Run the Project
 
-Install the required libraries:
+Install the dependencies:
+
+```bash
 pip install -r requirements.txt
+```
 
-Run the project:
+Run the prediction script:
+
+```bash
 python src/crop_yield_prediction.py
+```
 
 ## What I Learned
 
-- Data cleaning and inspection
-- Exploratory Data Analysis
-- Data visualization
-- Feature selection
-- Train-test splitting
-- Multiple Linear Regression
-- Model evaluation
-- Model saving and loading
-- Making predictions with a trained model
+Through this project, I practiced:
+
+* Data cleaning and inspection
+* Exploratory Data Analysis
+* Data visualization
+* Feature selection
+* Train-test splitting
+* Multiple Linear Regression
+* Model evaluation
+* Saving and loading trained models
+* Making predictions with a trained model
 
 ## Limitations
 
-The dataset contains some unusual values, including negative rainfall and yield observations. Therefore, the results should be viewed as part of a Machine Learning learning project rather than real-world agricultural prediction.
+The dataset contains some unusual values, including negative rainfall and yield observations. Because of this, I consider this project mainly a **machine learning learning project**, rather than a model ready for real-world agricultural decision-making.
 
 ## Author
 
 **Frankline Oyoo**
-
-Data Science | Analytics | Machine Learning
-
-GitHub: `github.com/Oyoo-Frankline`
