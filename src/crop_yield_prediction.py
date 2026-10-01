@@ -136,7 +136,7 @@ plt.savefig(
 plt.show()
 
 
-# Preparing features and target
+# features and target
 X = df[
     [
         "Temperature",
